@@ -17,7 +17,7 @@ class Navigation extends React.Component {
                         <a className="nav-item" href="#about">About</a>
                     </NavItem>
                     <NavItem >
-                        <a className="nav-item" href="#services">Services</a>
+                        <a className="nav-item" href="#posts">Posts</a>
                     </NavItem>
                     <NavItem >
                         <a className="nav-item" href="#portfolio">Portfolio</a>

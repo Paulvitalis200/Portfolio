@@ -1,38 +1,64 @@
 import React from 'react';
 import styled from 'styled-components';
 import { montserrat } from '../styles/type';
-
-import Success from '../assets/html.png';
+import axios from 'axios'
+// import Success from '../assets/html.png';
 import Flyers from '../assets/flyers.png';
-import Iphone from '../assets/iphone.png';
+// import Iphone from '../assets/iphone.png';
+
+type Posts = {
+    title: String,
+    body: String,
+    id: any,
+}
 
 class services extends React.Component {
+    state: { posts : Posts[] } = {
+        posts: [
+
+        ]
+    }
+
+    componentDidMount() {
+        console.log('Component Mounted')
+        axios.get('https://jsonplaceholder.typicode.com/posts/')
+        .then(res => {
+            this.setState({
+                posts: res.data.slice(0, 3)
+            })
+        })
+    }
+    
     render() {
+        console.log(this.state);
+        const { posts } = this.state;
+        const postList = posts.map( post => {
+            return (
+                <WebDesign className="cards" key={post.id}>
+                    <img className="icons" src={Flyers} alt="Success"/>
+                  
+                        <Text>{post.title}</Text>
+                    
+                    <TextBody>
+                        {post.body}
+                    </TextBody>
+                </WebDesign>
+            )
+        })
+                  
         return (
-            <MainBody id="services">
-                <Heading>Services.</Heading>
-                    <ServicesBody>
-                    <WebDesign className="cards">
-                        <img className="icons" src={Success} alt="Success"/>
-                        <Text>Website Development</Text>
-                        <TextBody>
-                            I offer web design at a good price and a guarantee of good clean work.
-                        </TextBody>
-                    </WebDesign>
-                    <Photography className="cards">
-                        <img className="icons" src={Iphone} alt="Iphone"/>
-                        <Text>Product Design</Text>
-                        <TextBody>
-                            I offer product design on stuff such as mobile apps, websites, company logos and t-shirt designs. 
-                        </TextBody>
-                    </Photography>
-                    <Events className="cards">
-                        <img className="icons" src={Flyers} alt="Assurance"/>
-                        <Text>Quality Assurance</Text>
-                        <TextBody>
-                            I offer quality assurance on software products, unit tests and websites.
-                        </TextBody>
-                    </Events>
+            <MainBody id="posts">
+                <Heading>Posts.</Heading>
+                <ServicesBody>
+                    {posts.length ? 
+                        (postList) :
+                        (
+                            <FetchPost>
+                                Fetching posts... 
+                                <p className="smiley">&#129322;</p>
+                            </FetchPost>
+                        )
+                        } 
                 </ServicesBody>
             </MainBody>
         )
@@ -42,6 +68,7 @@ class services extends React.Component {
 export const MainBody = styled.div`
     background: #f7f7f7;
     max-width: 100%;
+    
 `;
 
 export const Heading = styled.p`
@@ -67,6 +94,8 @@ export const ServicesBody = styled.div`
         margin: 0 auto 30px auto;
     }
     @media only screen and (min-width: 600px) {
+        display: flex;
+        flex-direction: row;
         .cards {
             width: 30%;
             height: 200px;
@@ -76,6 +105,7 @@ export const ServicesBody = styled.div`
     @media only screen and (min-width: 768px) {
         width: 90%;
         margin: 0 auto;
+        
         .cards {
             width: 30%;
             height: 250px;
@@ -126,6 +156,7 @@ export const Events = styled.div`
 `;
 
 export const WebDesign = styled.div`
+    overflow: hidden;
     .icons{
         margin-top: 40px;
         display: inline-block;
@@ -152,6 +183,7 @@ export const Text = styled.p`
     font-family: ${montserrat};
     letter-spacing: 1px;
     text-align: center;
+    text-decoration: none;
     color: #333;
     @media only screen and (min-width: 600px) {
         font-size: 17px;
@@ -166,6 +198,7 @@ export const TextBody = styled.p`
     padding-right: 10px;
     font-family: ${montserrat};
     color: #748182;
+
     @media only screen and (min-width: 600px) {
         font-size: 13px
     }
@@ -173,6 +206,18 @@ export const TextBody = styled.p`
         font-size: 16px;
     }
     
+`;
+
+export const FetchPost = styled.div`
+    margin: 0 auto;
+    font-size: 24px;
+    font-family: ${montserrat};
+    color: #748182;
+
+    .smiley {
+        font-size: 2.5em;
+        margin-top: 0;
+    }
 `;
 
 export default services;

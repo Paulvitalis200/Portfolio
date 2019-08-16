@@ -6,19 +6,23 @@ import Contact from './components/contact';
 import Portfolio from './components/portfolio';
 import FooterBody from './components/footer';
 import Navigation from './components/navigation';
+import { BrowserRouter } from 'react-router-dom'
+
 
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Navigation />
-      <Home />
-      <About />
-      <Services />
-      <Portfolio />
-      <Contact />
-      <FooterBody /> 
-    </div>
+    <BrowserRouter>
+      <div>
+        <Navigation />
+        <Home />
+        <About />
+        <Services />
+        <Portfolio />
+        <Contact />
+        <FooterBody /> 
+      </div>
+    </BrowserRouter>
   );
 }
 
