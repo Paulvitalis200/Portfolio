@@ -1,57 +1,73 @@
-import React from 'react'
+import * as React from 'react';
 import styled from 'styled-components';
-import { montserrat } from '../styles/type';
+import { poppins, montserrat } from '../styles/type';
+import storemanager from '../assets/storemanager.png';
+import design from '../assets/Design.png';
+import restaurant from '../assets/Restaurant.png';
 
-import Civilwar from '../assets/Civil-war.png';
-import Galaxy from '../assets/galaxy34.png';
-import Monkey from '../assets/monkey.png';
-import Worktop from '../assets/worktop.png';
-import Sword from '../assets/sword-3.png';
-import Paul from '../assets/paul.png';
+export interface PortfolioProps {
 
-class Portfolio extends React.Component {
-    render() {
-        return (
-            <PortfolioBody id="portfolio" >
-                <Heading >Portfolio.</Heading>
-                <Images>
-                    <img className="portfolio-img" src={Civilwar} alt="civil-war"/>
-                    <img className="portfolio-img" src={Galaxy} alt="Galaxy" />
-                    <img className="portfolio-img" src={Monkey} alt="Monkey"></img>
-                    <img className="portfolio-img" src={Worktop} alt="Worktop"/>
-                    <img className="portfolio-img" src={Sword} alt="Sword" />
-                    <img className="portfolio-img" src={Paul} alt="Paul" />
-                </Images>
-            </PortfolioBody>
-        )
-    }
 }
 
-const PortfolioBody = styled.div`
-    width: 100%;
-    background: #fff;
-    
-    
-`;
+const Portfolio: React.SFC<PortfolioProps> = () => {
+    return (
+        <MainBody>
+            <Heading id="portfolio">Portfolio.</Heading>
+            <PortfolioBody>
+                <Project >
+                    <img className="portfolio-img" src={design} alt="Design portfolio" />
+                    <TextBody>
+                        <Title>Design Portfolio</Title>
+                        <Text>
+                            This is my design portfolio where I display some of my graphic Design work.<br />
+                            <Button>
+                                <a href="https://github.com/Paulstar200/Design-portfolio" target="_blank" className="read-btn">Github repo</a>
+                            </Button>
+                            <Button>
+                                <a href="https://veeportfolio.netlify.com" target="_blank" className="read-btn">Website</a>
+                            </Button>
+                        </Text>
+                    </TextBody>
+                </Project>
+                <Project className="design-portfolio">
+                    <img className="portfolio-img" src={restaurant} alt="Restaurant app" />
+                    <TextBody>
+                        <Title>R4U</Title>
+                        <Text>
+                            A restaurant application that users can use to know if a certain restaurant is opened or closed based on the current time. <br />
+                            <Button>
+                                <a href="https://github.com/Paulstar200/Restaurant-1" target="_blank" className="read-btn">Github repo</a>
+                            </Button>
+                            <Button>
+                                <a href="https://restaurant-app-2.herokuapp.com/" target="_blank" className="read-btn">Website</a>
+                            </Button>
+                        </Text>
+                    </TextBody>
+                </Project>
+                <Project >
+                    <img className="portfolio-img" src={storemanager} alt="Store manager" />
+                    <TextBody>
+                        <Title>Store Manager</Title>
+                        <Text>
+                            Store Manager is a web application that helps store owners manage sales and product inventory records.<br />
+                            <Button>
+                                <a href="https://github.com/Paulstar200/Store-Manager" target="_blank" className="read-btn">Github repo</a>
+                            </Button>
+                            <Button>
+                                <a href="https://paulstar200.github.io/Store-Manager/UI/index.html" target="_blank" className="read-btn">Website</a>
+                            </Button>
+                        </Text>
+                    </TextBody>
+                </Project>
 
-const Images = styled.div`
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    .portfolio-img{
-        width: 48%;
-        margin: 0 auto 10px auto;
-        height: 100%;
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 
-        @media only screen and (min-width: 768px) {
-            width: 30%;
-            margin-bottom: 15px;
-        }
-    }
+            </PortfolioBody>
+        </MainBody >
+    );
+}
+
+const MainBody = styled.div`
+    background: #f7f7f7;    
 `;
 
 const Heading = styled.h1`
@@ -60,10 +76,83 @@ const Heading = styled.h1`
     text-align: center;
     font-family: ${montserrat};
     font-weight: 800;
+    margin: 0 0 20px 0;
     padding-top: 80px;
     color: #333;
+    @media only screen and (min-width: 768px) {
+        margin-bottom: 40px;
+    }
 `;
 
+const PortfolioBody = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    @media only screen and (min-width: 768px) {
+        
+        margin: 0 auto;
+        .design-portfolio{
+            flex-direction: row-reverse;
+        }
+    }
 
+`;
+
+const Project = styled.div`
+    text-align: center;
+    
+    .portfolio-img{
+        width: 80%;
+        border-radius: 1%;
+        box-shadow: 3px 3px 10px 5px rgba(211,211,211, 0.5);
+    }
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        width: 85%;
+        justify-content: space-between;
+        margin: 0 auto 40px auto;
+        .portfolio-img{
+            align-self: center;
+            width: 45%;
+            border-radius: 1%;
+            box-shadow: 3px 3px 10px 5px rgba(211,211,211, 0.5);
+        }
+        
+    }
+`;
+
+const TextBody = styled.div`
+    font-family: ${poppins};
+    color: #748182;
+    margin-bottom: 50px;
+    @media only screen and (min-width: 768px) {
+        padding-left: 20px;
+    }
+`;
+
+const Title = styled.h1`
+    font-family: ${montserrat};
+`;
+
+const Text = styled.p``;
+
+const Button = styled.div`
+    margin-top: 15px;
+    .read-btn{
+        background: white;
+        padding: 5px 20px 5px 20px;
+        font-family: ${montserrat};
+        border-radius: 4px;
+        border: 1px solid black;
+        text-decoration: none;
+        font-size: 15px;
+        color: #000;
+    }
+
+    .read-btn:hover{
+        background: #000;
+        color: #fff;
+    }
+`;
 
 export default Portfolio;

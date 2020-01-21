@@ -2,14 +2,16 @@ import React from 'react'
 import styled from 'styled-components';
 import { poppins } from '../styles/type';
 
-class Footer extends React.Component {
-    render() {
-        return (
-            <FooterBody>
-                <FooterText>Copyright 2019 &copy; Paul Vitalis</FooterText>
-            </FooterBody>
-        )
-    }
+export interface FooterProps {
+
+}
+
+const Footer: React.SFC<FooterProps> = () => {
+    return (
+        <FooterBody>
+            <FooterText>&copy; 2020 Paul Vitalis Otieno</FooterText>
+        </FooterBody>
+    );
 }
 
 export const FooterBody = styled.div`

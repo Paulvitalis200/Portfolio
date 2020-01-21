@@ -1,58 +1,56 @@
 import React from 'react';
 import styled from 'styled-components';
 import { montserrat } from '../styles/type'
-// import Phone from '../assets/myphone.png';
-// import Email from '../assets/email.png';
-// import Postoffice from '../assets/address2.png';
 
-class Contact extends React.Component {
-    render() {
-        return (
-            <MainContactBody >
-                <Heading id="contact" >Contact.</Heading>
-                <ContactBody>
-                    <EmailBody>
-                        {/* <img className="icons" src={Email} alt="Email"/> */}
-                        <Text>Email</Text>
-                        <TextBody>
-                            vitalispaul48@gmail.com
+export interface ContactProps {
+
+}
+
+const Contact: React.SFC<ContactProps> = () => {
+    return (
+        <MainContactBody >
+            <Heading id="contact" >Contact.</Heading>
+            <ContactBody>
+                <EmailBody>
+                    <Text>Email</Text>
+                    <TextBody>
+                        vitalispaul48@live.com
                         </TextBody>
-                    </EmailBody>
-                    <PhoneBody>
-                        {/* <img className="icons" src={Phone} alt="Phone"/> */}
-                        <Text>Phone</Text>
-                        <TextBody>
-                            +254 726-558493
+                </EmailBody>
+                <PhoneBody>
+                    <Text>Phone</Text>
+                    <TextBody>
+                        +254 726 840 589
                         </TextBody>
-                    </PhoneBody>
-                    <AddressBody>
-                        {/* <img className="icons" src={Postoffice} alt="Postoffice"/> */}
-                        <Text>Address</Text>
-                        <TextBody>
-                            P.O Box 66963, NAIROBI
+                </PhoneBody>
+                <AddressBody>
+                    <Text>Address</Text>
+                    <TextBody>
+                        P.O Box 66963, NAIROBI
                         </TextBody>
-                    </AddressBody>
-                </ContactBody>
-                <FormBody action="https://formspree.io/email@domain.tld" method="POST">
-                    <UpperForm>
-                        <input className="upper-form-field" type="text" name="name" placeholder="Name"/>
-                        <input className="upper-form-field" type="email" name="_replyto" placeholder="Email"/>
-                    </UpperForm>
-                    <LowerForm>
-                        <textarea className="input-textarea" placeholder="Message" name="name"></textarea>
-                    </LowerForm>
-                    <SubmitButton>
-                        <input id="submit-btn" type="submit" value="Send" />
-                    </SubmitButton>
-                </FormBody>
-            </MainContactBody>
-        )
-    }
+                </AddressBody>
+            </ContactBody>
+            <FormBody action="https://formspree.io/mqkpjkll" method="POST">
+                <UpperForm>
+                    <input className="upper-form-field" type="text" name="name" placeholder="Name" />
+                    <input className="upper-form-field" type="email" name="_replyto" placeholder="Email" />
+                </UpperForm>
+                <LowerForm>
+                    <textarea className="input-textarea" placeholder="Message" name="name"></textarea>
+                </LowerForm>
+                <SubmitButton>
+                    <input id="submit-btn" type="submit" value="Send" />
+                </SubmitButton>
+            </FormBody>
+        </MainContactBody>
+    );
 }
 
 
+
+
 const MainContactBody = styled.div`
-    background: #f7f7f7;
+    background: #fff;
     padding-bottom: 40px;
     width: 100%;
 `;
@@ -63,6 +61,7 @@ const Heading = styled.p`
     font-family: ${montserrat};
     font-weight: 800;
     color: #333;
+    margin: 0;
     padding-top: 80px;
 `;
 

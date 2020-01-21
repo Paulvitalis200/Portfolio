@@ -2,35 +2,36 @@ import React from 'react'
 import styled from 'styled-components';
 import { montserrat } from '../styles/type';
 
-class Navigation extends React.Component {
-    render() {
-        return (
-            <Header>
-                  <HeaderLogo>
-                      <a className="logo-item" href="#home">VITALIS</a>
-                  </HeaderLogo>
-                  <NavigationBody>
-                    <NavItem >
-                        <a className="nav-item" href="#home">Home</a>
-                    </NavItem>
-                    <NavItem >
-                        <a className="nav-item" href="#about">About</a>
-                    </NavItem>
-                    <NavItem >
-                        <a className="nav-item" href="#posts">Posts</a>
-                    </NavItem>
-                    <NavItem >
-                        <a className="nav-item" href="#portfolio">Portfolio</a>
-                    </NavItem>
-                    <NavItem >
-                        <a className="nav-item" href="#contact">Contact</a>
-                    </NavItem>
-                </NavigationBody>
-            </Header>
-        )
-    }
+export interface NavigationProps {
+
 }
 
+const Navigation: React.SFC<NavigationProps> = () => {
+  return (
+    <Header>
+      <HeaderLogo>
+        <a className="logo-item" href="#about">VITALIS</a>
+      </HeaderLogo>
+      <NavigationBody>
+        <NavItem >
+          <a className="nav-item" href="#about">Home</a>
+        </NavItem>
+        <NavItem >
+          <a className="nav-item" href="#proficiencies">Stacks</a>
+        </NavItem>
+        <NavItem >
+          <a className="nav-item" href="#posts">Posts</a>
+        </NavItem>
+        <NavItem >
+          <a className="nav-item" href="#portfolio">Portfolio</a>
+        </NavItem>
+        <NavItem >
+          <a className="nav-item" href="#contact">Contact</a>
+        </NavItem>
+      </NavigationBody>
+    </Header>
+  );
+}
 
 const HeaderLogo = styled.p`
     font-size: 20px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './components/home';
-import About from './components/about';
 import Services from './components/services';
+import Proficiencies from './components/proficiencies';
 import Contact from './components/contact';
 import Portfolio from './components/portfolio';
 import FooterBody from './components/footer';
@@ -16,11 +16,11 @@ const App: React.FC = () => {
       <div>
         <Navigation />
         <Home />
-        <About />
+        <Proficiencies />
         <Services />
         <Portfolio />
         <Contact />
-        <FooterBody /> 
+        <FooterBody />
       </div>
     </BrowserRouter>
   );
