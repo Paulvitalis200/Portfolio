@@ -36,7 +36,7 @@ const Navigation: React.SFC<NavigationProps> = () => {
 const HeaderLogo = styled.p`
     font-size: 20px;
     color: #fff;
-    font-family: ${montserrat};
+    font-family: ${montserrat}, Sans-serif;
     font-weight: 800;
     text-align: center;
     margin: 0;
@@ -67,12 +67,13 @@ const NavigationBody = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 5px 20px 5px 20px;
-  margin: 0 auto;
+  // margin: 0 auto;
   background: #000;
   width: 90%;
   @media only screen and (min-width: 768px) {
     width: 40%;
     background: #000;
+    margin-right: 100px;
   }
 `;
 
@@ -81,12 +82,16 @@ const NavItem = styled.li`
   .nav-item{
     text-decoration: none;
     color: #fff;
-    font-size: 15px;
-    font-family: ${montserrat};
+    font-size: 16px;
+    font-family: ${montserrat}, Sans-serif;
+    @media only screen and (min-width: 768px) {
+      font-size: 18px;
+    }
   }
   .nav-item:hover{
     color: #748182;
   }
+  
 `;
 
 

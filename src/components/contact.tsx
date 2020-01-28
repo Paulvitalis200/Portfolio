@@ -10,38 +10,40 @@ const Contact: React.SFC<ContactProps> = () => {
     return (
         <MainContactBody >
             <Heading id="contact" >Contact.</Heading>
-            <ContactBody>
-                <EmailBody>
-                    <Text>Email</Text>
-                    <TextBody>
-                        vitalispaul48@live.com
+            <FlexBody>
+                <ContactBody>
+                    <EmailBody>
+                        <Text>Email</Text>
+                        <TextBody>
+                            vitalispaul48@live.com
                         </TextBody>
-                </EmailBody>
-                <PhoneBody>
-                    <Text>Phone</Text>
-                    <TextBody>
-                        +254 726 840 589
+                    </EmailBody>
+                    <PhoneBody>
+                        <Text>Phone</Text>
+                        <TextBody>
+                            +254 726 840 589
                         </TextBody>
-                </PhoneBody>
-                <AddressBody>
-                    <Text>Address</Text>
-                    <TextBody>
-                        P.O Box 66963, NAIROBI
+                    </PhoneBody>
+                    <AddressBody>
+                        <Text>Address</Text>
+                        <TextBody>
+                            P.O Box 66963, NAIROBI KENYA
                         </TextBody>
-                </AddressBody>
-            </ContactBody>
-            <FormBody action="https://formspree.io/mqkpjkll" method="POST">
-                <UpperForm>
-                    <input className="upper-form-field" type="text" name="name" placeholder="Name" />
-                    <input className="upper-form-field" type="email" name="_replyto" placeholder="Email" />
-                </UpperForm>
-                <LowerForm>
-                    <textarea className="input-textarea" placeholder="Message" name="name"></textarea>
-                </LowerForm>
-                <SubmitButton>
-                    <input id="submit-btn" type="submit" value="Send" />
-                </SubmitButton>
-            </FormBody>
+                    </AddressBody>
+                </ContactBody>
+                <FormBody action="https://formspree.io/mqkpjkll" method="POST">
+                    <UpperForm>
+                        <input className="upper-form-field" type="text" name="name" placeholder="Name" />
+                        <input className="upper-form-field" type="email" name="_replyto" placeholder="Email" />
+                    </UpperForm>
+                    <LowerForm>
+                        <textarea className="input-textarea" placeholder="Message" name="name"></textarea>
+                    </LowerForm>
+                    <SubmitButton>
+                        <input id="submit-btn" type="submit" value="Send" />
+                    </SubmitButton>
+                </FormBody>
+            </FlexBody>
         </MainContactBody>
     );
 }
@@ -58,7 +60,7 @@ const MainContactBody = styled.div`
 const Heading = styled.p`
     text-align: center;
     font-size: 40px;
-    font-family: ${montserrat};
+    font-family: ${montserrat}, Sans-serif;
     font-weight: 800;
     color: #333;
     margin: 0;
@@ -68,13 +70,39 @@ const Heading = styled.p`
 const ContactBody = styled.div`
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 77%;
     margin: 0 auto;
-    padding-left: 9%;
+    padding-left: 7%;
+    @media only screen and (min-width: 600px) {
+        flex-direction: column;
+        padding-left: 0;
+        width: 30%;
+        
+    }
 `;
+
+const FormBody = styled.form`
+@media only screen and (min-width: 600px) {
+    width: 60%;
+    margin-top: 30px;
+}
+`;
+
+
+
+const FlexBody = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 600px) {
+        flex-direction: row-reverse;
+    
+    }
+`
 
 const EmailBody = styled.div`
     width: 90%;
+    font-size: 18px;
     .icons{
         margin-top: 40px;
         height: 50px;
@@ -89,12 +117,7 @@ const EmailBody = styled.div`
 
 const PhoneBody = styled.div`
     width: 90%;
-    .icons{
-        margin-top: 40px;
-        display: inline-block;
-        height: 50px;
-        width: 50px;
-    }
+    font-size: 18px;
     @media only screen and (min-width: 768px) {
         width: 30%;
     }
@@ -102,12 +125,7 @@ const PhoneBody = styled.div`
 
 const AddressBody = styled.div`
     width: 90%;
-    .icons{
-        margin-top: 40px;
-        display: inline-block;
-        height: 50px;
-        width: 50px;
-    }
+    font-size: 18px;
     @media only screen and (min-width: 768px) {
         width: 30%;
     }
@@ -116,19 +134,24 @@ const AddressBody = styled.div`
 const Text = styled.p`
     text-align: center;
     font-weight: 900;
-    font-family: ${montserrat};
+    font-family: ${montserrat}, Sans-serif;
+    font-size: 20px;
     color: #333;
+    @media only screen and (min-width: 600px) {
+        font-size: 19px;
+    }
 `;
 
 const TextBody = styled.p`
     color: #748182;
-    font-family: ${montserrat};
+    font-family: ${montserrat}, Sans-serif;
     text-align: center;
+    @media only screen and (min-width: 600px) {
+        font-size: 17px;
+    }
 `;
 
-const FormBody = styled.form`
-    
-`;
+
 
 const SubmitButton = styled.span`
   #submit-btn{
@@ -136,7 +159,7 @@ const SubmitButton = styled.span`
     margin-left: 4.5%;
     background: #1c1c1c;
     padding: 5px 20px 5px 20px;
-    font-family: ${montserrat};
+    font-family: ${montserrat}, Sans-serif;
     border: 1px solid #1c1c1c;
     border-radius: 5px;
     font-size: 15px;
@@ -164,7 +187,7 @@ const UpperForm = styled.div`
         border-radius: 2%;
         border: none;
         font-size: 15px;
-        font-family: ${montserrat};
+        font-family: ${montserrat}, Sans-serif;
         background: #e8e8e8;
         padding-left: 1%;
         width: 90%;
@@ -196,7 +219,7 @@ const LowerForm = styled.div`
         border: none;
         font-size: 15px;
         background: #e8e8e8;
-        font-family: ${montserrat};
+        font-family: ${montserrat}, Sans-serif;
         height: 150px;
     }
     @media only screen and (min-width: 600px) {

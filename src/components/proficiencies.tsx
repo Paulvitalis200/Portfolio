@@ -2,12 +2,12 @@ import * as React from 'react';
 import styled from 'styled-components';
 import angular from '../assets/angular.svg';
 import react from '../assets/react.png';
-import flask from '../assets/flask-logo.png';
+import flask from '../assets/flask-new.png';
 import django from '../assets/djangorest.png';
 import mongo from '../assets/mongo.png';
 import postgres from '../assets/postgres.svg';
 import node from '../assets/node.png';
-import { poppins, montserrat } from '../styles/type';
+import { montserrat } from '../styles/type';
 
 export interface ProficienciesProps {
 
@@ -30,10 +30,10 @@ const Proficiencies: React.SFC<ProficienciesProps> = () => {
                     <img className="icons" src={node} alt="Node JS logo" />
                     <Text>Node JS</Text>
                 </Proficiency>
-                <Flask>
-                    <img className="icons-flask" src={flask} alt="Flask logo" />
+                <Proficiency>
+                    <img className="icons" src={flask} alt="Flask logo" />
                     <Text>Flask</Text>
-                </Flask>
+                </Proficiency>
                 <Proficiency>
                     <img className="icons" src={django} alt="Django logo" />
                     <Text>Django REST</Text>
@@ -61,7 +61,7 @@ const Heading = styled.h1`
     font-size: 40px;
     font-weight: 900;
     text-align: center;
-    font-family: ${montserrat};
+    font-family: ${montserrat}, Sans-serif;
     font-weight: 800;
     padding-top: 80px;
     color: #333;
@@ -84,6 +84,7 @@ const Proficiency = styled.div`
     }
     @media only screen and (min-width: 768px) {
         .icons {
+            align-self: center;
             display: inline-block;
             text-align: center;
             height: 150px;
@@ -92,29 +93,31 @@ const Proficiency = styled.div`
     }
 `;
 
-const Flask = styled.div`
-    width: 40%;
-    margin: 0 auto;
-    .icons-flask{
-        margin-top: 40px;
-        text-align: center;
-        display: inline-block;
-        width: 100%;
-    }
-    @media only screen and (min-width: 768px) {
-        width: 10%;
-        .icons-flask {
-            display: inline-block;
-            text-align: center;
-            width: 145%;
-        }
-    }
-`;
+// const Flask = styled.div`
+//     width: 40%;
+//     margin: 0 auto;
+//     .icons-flask{
+//         align-self: center;
+//         margin-top: 40px;
+//         text-align: center;
+//         display: inline-block;
+//         width: 100%;
+//     }
+//     @media only screen and (min-width: 768px) {
+//         width: 10%;
+//         .icons-flask {
+//             align-self: center;
+//             display: inline-block;
+//             text-align: center;
+//             width: 145%;
+//         }
+//     }
+// `;
 
 export const Text = styled.p`
     font-size: 20px;
     font-weight: bold;
-    font-family: ${montserrat};
+    font-family: ${montserrat}, Sans-serif;
     letter-spacing: 1px;
     text-align: center;
     text-decoration: none;
