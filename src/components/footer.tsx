@@ -24,8 +24,8 @@ export const FooterText = styled.p`
     padding-top: 20px;
     margin: 0;
     text-align: center;
-    font-size: 14px;
-    font-family: ${poppins};
+    font-size: 17px;
+    font-family: ${poppins}, Sans-serif;
 `;
 
 

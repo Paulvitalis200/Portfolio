@@ -26,7 +26,7 @@ const Posts: React.SFC<PostsProps> = () => {
                         The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation DOM by.....
                     </TextBody>
                     <Button>
-                        <a href="https://medium.com/@paulvitalis/the-virtual-dom-9cea35721949" target="_blank" className="read-btn">Read More</a>
+                        <a href="https://medium.com/@paulvitalis/the-virtual-dom-9cea35721949" rel="noopener noreferrer" target="_blank" className="read-btn">Read More</a>
                     </Button>
                 </Post>
                 <Post className="cards">
@@ -40,7 +40,7 @@ const Posts: React.SFC<PostsProps> = () => {
                         CSS (Cascading Style Sheets) has undergone various iterations, to get to its current state of maturity.....
                     </TextBody>
                     <Button>
-                        <a href="https://medium.com/@paulvitalis/css-strategies-be3bf02a68d2" target="_blank" className="read-btn">Read More</a>
+                        <a href="https://medium.com/@paulvitalis/css-strategies-be3bf02a68d2" rel="noopener noreferrer" target="_blank" className="read-btn">Read More</a>
                     </Button>
                 </Post>
                 <Post className="cards">
@@ -54,7 +54,7 @@ const Posts: React.SFC<PostsProps> = () => {
                         About a month ago, I got an email from Digital Ocean inviting me to start a Free Kubernetes course for.....
                     </TextBody>
                     <Button>
-                        <a href="https://www.linkedin.com/pulse/my-introduction-kubernetes-paul-vitalis/" target="_blank" className="read-btn">Read More</a>
+                        <a href="https://www.linkedin.com/pulse/my-introduction-kubernetes-paul-vitalis/" rel="noopener noreferrer" target="_blank" className="read-btn">Read More</a>
                     </Button>
                 </Post>
             </PostBody>
@@ -70,7 +70,7 @@ export const MainBody = styled.div`
 export const Heading = styled.p`
     text-align: center;
     font-size: 40px;
-    font-family: ${montserrat};
+    font-family: ${montserrat}, Sans-serif;
     font-weight: 900;
     color: #333;
     padding-top: 80px;
@@ -133,7 +133,7 @@ export const Post = styled.div`
 export const Text = styled.p`
     font-size: 15px;
     font-weight: bold;
-    font-family: ${montserrat};
+    font-family: ${montserrat}, Sans-serif;
     letter-spacing: 1px;
     text-align: center;
     text-decoration: none;
@@ -149,7 +149,7 @@ export const Text = styled.p`
 export const TextBody = styled.p`
     padding-left: 10px;
     padding-right: 10px;
-    font-family: ${montserrat};
+    font-family: ${montserrat}, Sans-serif;
     color: #748182;
     font-size: 14px;
     @media only screen and (min-width: 600px) {
@@ -165,7 +165,7 @@ const Button = styled.div`
     .read-btn{
         background: white;
         padding: 5px 20px 5px 20px;
-        font-family: ${montserrat};
+        font-family: ${montserrat}, Sans-serif;
         border-radius: 4px;
         border: 1px solid black;
         text-decoration: none;
