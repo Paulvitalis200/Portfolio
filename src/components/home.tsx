@@ -18,7 +18,7 @@ const Home: React.SFC<HomeProps> = () => {
                 </MyImage>
                 <TextArea>
                     <Title>Paul Vitalis Otieno.</Title>
-                    <Description>Full stack Developer || UX/UI Designer</Description>
+                    <Description>Software Engineer</Description>
                     <TextBody>
                         Hello There. My name is <strong>Paul Vitalis Otieno</strong>.<br />
                         I'm a Full-stack software engineer based in Nairobi, Kenya.<br />
