@@ -1,16 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { poppins, montserrat } from '../styles/type';
-import storemanager from '../assets/storemanager.png';
+import storemanager from '../assets/storemanager-react.png';
 import design from '../assets/Design.png';
 import restaurant from '../assets/Restaurant.png';
 import roo from '../assets/roo.png';
 
-export interface PortfolioProps {
-
-}
-
-const Portfolio: React.SFC<PortfolioProps> = () => {
+const Portfolio = () => {
     return (
         <MainBody>
             <Heading id="portfolio">Portfolio.</Heading>
@@ -42,6 +38,21 @@ const Portfolio: React.SFC<PortfolioProps> = () => {
                         </Text>
                     </TextBody>
                 </Project>
+                <Project className="store-manager" >
+                    <img className="portfolio-img" src={storemanager} alt="Store manager" />
+                    <TextBody>
+                        <Title>Store Manager</Title>
+                        <Text>
+                            Store Manager is a web application that helps store owners manage sales and product inventory records.<br />
+                            <Button>
+                                <a href="https://github.com/Paulstar200/Store-Manager-React" rel="noopener noreferrer" target="_blank" className="read-btn">Github repo</a>
+                            </Button>
+                            <Button>
+                                <a href="https://storemanagerfrontend.herokuapp.com/" rel="noopener noreferrer" target="_blank" className="read-btn">Website</a>
+                            </Button>
+                        </Text>
+                    </TextBody>
+                </Project>
                 <Project className="design-portfolio">
                     <img className="portfolio-img" src={restaurant} alt="Restaurant app" />
                     <TextBody>
@@ -57,21 +68,7 @@ const Portfolio: React.SFC<PortfolioProps> = () => {
                         </Text>
                     </TextBody>
                 </Project>
-                <Project className="store-manager" >
-                    <img className="portfolio-img" src={storemanager} alt="Store manager" />
-                    <TextBody>
-                        <Title>Store Manager</Title>
-                        <Text>
-                            Store Manager is a web application that helps store owners manage sales and product inventory records.<br />
-                            <Button>
-                                <a href="https://github.com/Paulstar200/Store-Manager" rel="noopener noreferrer" target="_blank" className="read-btn">Github repo</a>
-                            </Button>
-                            <Button>
-                                <a href="https://paulstar200.github.io/Store-Manager/UI/index.html" rel="noopener noreferrer" target="_blank" className="read-btn">Website</a>
-                            </Button>
-                        </Text>
-                    </TextBody>
-                </Project>
+
 
 
             </PortfolioBody>
@@ -104,7 +101,7 @@ const PortfolioBody = styled.div`
     @media only screen and (min-width: 768px) {
         
         margin: 0 auto;
-        .store-manager, .roo-img{
+        .design-portfolio, .roo-img{
             flex-direction: row-reverse;
         }
     }
