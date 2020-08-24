@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { poppins, montserrat } from '../styles/type';
 import storemanager from '../assets/storemanager-react.png';
+import store from '../assets/storemanager.png';
 import design from '../assets/Design.png';
 import restaurant from '../assets/Restaurant.png';
 import roo from '../assets/roo.png';
@@ -38,10 +39,25 @@ const Portfolio = () => {
                         </Text>
                     </TextBody>
                 </Project>
-                <Project className="store-manager" >
+                <Project className="store-manager-1" >
+                    <img className="portfolio-img" src={store} alt="store manager 1" />
+                    <TextBody>
+                        <Title>Store Manager - Version 1</Title>
+                        <Text>
+                        Store Manager is a web application that helps store owners manage sales and product inventory records.<br />
+                            <Button>
+                                <a href="https://github.com/Paulstar200/Store-Manager" rel="noopener noreferrer" target="_blank" className="read-btn">Github repo</a>
+                            </Button>
+                            <Button>
+                                <a href="https://paulstar200.github.io/Store-Manager/UI/index.html" rel="noopener noreferrer" target="_blank" className="read-btn">Website</a>
+                            </Button>
+                        </Text>
+                    </TextBody>
+                </Project>
+                <Project className="roo-img" >
                     <img className="portfolio-img" src={storemanager} alt="Store manager" />
                     <TextBody>
-                        <Title>Store Manager</Title>
+                        <Title>Store Manager - Version 2</Title>
                         <Text>
                             Store Manager is a web application that helps store owners manage sales and product inventory records.<br />
                             <Button>
@@ -53,7 +69,7 @@ const Portfolio = () => {
                         </Text>
                     </TextBody>
                 </Project>
-                <Project className="design-portfolio">
+                <Project className="">
                     <img className="portfolio-img" src={restaurant} alt="Restaurant app" />
                     <TextBody>
                         <Title>R4U</Title>
@@ -101,7 +117,7 @@ const PortfolioBody = styled.div`
     @media only screen and (min-width: 768px) {
         
         margin: 0 auto;
-        .design-portfolio, .roo-img{
+        .design-portfolio, .roo-img {
             flex-direction: row-reverse;
         }
     }
