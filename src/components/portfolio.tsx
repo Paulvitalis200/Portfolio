@@ -40,36 +40,21 @@ const Portfolio = () => {
                     </TextBody>
                 </Project>
                 <Project className="store-manager-1" >
-                    <img className="portfolio-img" src={store} alt="store manager 1" />
+                    <img className="portfolio-img" src={storemanager} alt="store manager 1" />
                     <TextBody>
-                        <Title>Store Manager - Version 1</Title>
+                        <Title>Store Manager</Title>
                         <Text>
                         Store Manager is a web application that helps store owners manage sales and product inventory records.<br />
                             <Button>
-                                <a href="https://github.com/Paulstar200/Store-Manager" rel="noopener noreferrer" target="_blank" className="read-btn">Github repo</a>
+                                <a href="https://github.com/Paulvitalis200/Store-Manager-Angular" rel="noopener noreferrer" target="_blank" className="read-btn">Github repo</a>
                             </Button>
                             <Button>
-                                <a href="https://paulstar200.github.io/Store-Manager/UI/index.html" rel="noopener noreferrer" target="_blank" className="read-btn">Website</a>
+                                <a href="https://storemanager-angular.herokuapp.com/" rel="noopener noreferrer" target="_blank" className="read-btn">Website</a>
                             </Button>
                         </Text>
                     </TextBody>
                 </Project>
                 <Project className="roo-img" >
-                    <img className="portfolio-img" src={storemanager} alt="Store manager" />
-                    <TextBody>
-                        <Title>Store Manager - Version 2</Title>
-                        <Text>
-                            Store Manager is a web application that helps store owners manage sales and product inventory records.<br />
-                            <Button>
-                                <a href="https://github.com/Paulstar200/Store-Manager-React" rel="noopener noreferrer" target="_blank" className="read-btn">Github repo</a>
-                            </Button>
-                            <Button>
-                                <a href="https://storemanagerfrontend.herokuapp.com/" rel="noopener noreferrer" target="_blank" className="read-btn">Website</a>
-                            </Button>
-                        </Text>
-                    </TextBody>
-                </Project>
-                <Project className="">
                     <img className="portfolio-img" src={restaurant} alt="Restaurant app" />
                     <TextBody>
                         <Title>R4U</Title>
@@ -84,9 +69,6 @@ const Portfolio = () => {
                         </Text>
                     </TextBody>
                 </Project>
-
-
-
             </PortfolioBody>
         </MainBody >
     );

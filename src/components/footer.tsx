@@ -9,7 +9,7 @@ export interface FooterProps {
 const Footer: React.SFC<FooterProps> = () => {
     return (
         <FooterBody>
-            <FooterText>&copy; 2020 Paul Vitalis Otieno</FooterText>
+            <FooterText>&copy; 2021 Paul Vitalis Otieno</FooterText>
         </FooterBody>
     );
 }

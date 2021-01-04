@@ -18,11 +18,11 @@ const Home: React.SFC<HomeProps> = () => {
                 </MyImage>
                 <TextArea>
                     <Title>Paul Vitalis Otieno.</Title>
-                    <Description>Software Engineer</Description>
+                    <Description>Software Engineer | UX/UI Designer</Description>
                     <TextBody>
-                        Hello There. My name is <strong>Paul Vitalis Otieno</strong>.<br />
-                        I'm a Full-stack software engineer based in Nairobi, Kenya.<br />
-                        I love solving problems through code and learning new skills.<br />
+                        Hello There. My name is <strong>Paul Vitalis Otieno</strong>.
+                        I'm a Full-stack software engineer based in Nairobi, Kenya.
+                        I love solving problems through code and learning new skills.
                         I am passionate about great user experience and user interface design.
                     </TextBody>
                     <ContactButton>
