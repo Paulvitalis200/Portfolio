@@ -15,7 +15,7 @@ const Home: React.SFC<HomeProps> = () => {
           <img id="paul" src={Display} alt="Paul profile pic" />
         </MyImage>
         <TextArea>
-          <Title>Paul Otieno.</Title>
+          <Title>Paul Vitalis Otieno.</Title>
           <Description>Software Engineer</Description>
           <TextBody>
             Hello There. My name is <strong>Paul Otieno</strong>. I'm a
