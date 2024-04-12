@@ -5,6 +5,7 @@ import design from "../assets/Design.png";
 import gamehub from "../assets/gamehub.png";
 import countries from "../assets/countries.png";
 import advice from "../assets/advice.png";
+import rick from "../assets/rick.png";
 
 const Portfolio = () => {
   return (
@@ -105,6 +106,37 @@ const Portfolio = () => {
           </TextBody>
         </Project>
         <Project className="roo-img">
+          <img className="portfolio-img" src={rick} alt="Design portfolio" />
+          <TextBody>
+            <Title>Shows app</Title>
+            <Text>
+              An app that shows the characters from the show Rick and Morty. The
+              data is fetched from the Rick and Morty API.
+              <br />
+              <Button>
+                <a
+                  href="https://github.com/Paulvitalis200/rick-morty"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="read-btn"
+                >
+                  Github repo
+                </a>
+              </Button>
+              <Button>
+                <a
+                  href="https://rick-morty-one.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="read-btn"
+                >
+                  Website
+                </a>
+              </Button>
+            </Text>
+          </TextBody>
+        </Project>
+        <Project>
           <img className="portfolio-img" src={design} alt="Design portfolio" />
           <TextBody>
             <Title>Design Portfolio</Title>
