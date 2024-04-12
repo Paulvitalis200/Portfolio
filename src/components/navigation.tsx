@@ -1,54 +1,63 @@
-import React from 'react'
-import styled from 'styled-components';
-import { montserrat } from '../styles/type';
+import React from "react";
+import styled from "styled-components";
+import { montserrat } from "../styles/type";
 
-export interface NavigationProps {
-
-}
+export interface NavigationProps {}
 
 const Navigation: React.SFC<NavigationProps> = () => {
   return (
     <Header>
       <HeaderLogo>
-        <a className="logo-item" href="#about">VITALIS</a>
+        <a className="logo-item" href="#about">
+          PAUL OTIENO
+        </a>
       </HeaderLogo>
       <NavigationBody>
-        <NavItem >
-          <a className="nav-item" href="#about">Home</a>
+        <NavItem>
+          <a className="nav-item" href="#about">
+            Home
+          </a>
         </NavItem>
-        <NavItem >
-          <a className="nav-item" href="#proficiencies">Stacks</a>
+        <NavItem>
+          <a className="nav-item" href="#proficiencies">
+            Stacks
+          </a>
         </NavItem>
-        <NavItem >
-          <a className="nav-item" href="#posts">Posts</a>
+        <NavItem>
+          <a className="nav-item" href="#articles">
+            Articles
+          </a>
         </NavItem>
-        <NavItem >
-          <a className="nav-item" href="#portfolio">Portfolio</a>
+        <NavItem>
+          <a className="nav-item" href="#portfolio">
+            Portfolio
+          </a>
         </NavItem>
-        <NavItem >
-          <a className="nav-item" href="#contact">Contact</a>
+        <NavItem>
+          <a className="nav-item" href="#contact">
+            Contact
+          </a>
         </NavItem>
       </NavigationBody>
     </Header>
   );
-}
+};
 
 const HeaderLogo = styled.p`
-    font-size: 20px;
+  font-size: 20px;
+  color: #fff;
+  font-family: ${montserrat}, Sans-serif;
+  font-weight: 800;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  .logo-item {
+    text-decoration: none;
     color: #fff;
-    font-family: ${montserrat}, Sans-serif;
-    font-weight: 800;
-    text-align: center;
-    margin: 0;
-    padding: 5px;
-    .logo-item{
-      text-decoration: none;
-      color: #fff;
-    }
-    @media only screen and (min-width: 768px) {
-      margin-left: 150px;
-      
-    }
+  }
+  @media only screen and (min-width: 768px) {
+    margin-left: 150px;
+  }
 `;
 
 const Header = styled.div`
@@ -79,7 +88,7 @@ const NavigationBody = styled.div`
 
 const NavItem = styled.li`
   list-style: none;
-  .nav-item{
+  .nav-item {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
@@ -88,11 +97,9 @@ const NavItem = styled.li`
       font-size: 18px;
     }
   }
-  .nav-item:hover{
+  .nav-item:hover {
     color: #748182;
   }
-  
 `;
-
 
 export default Navigation;
