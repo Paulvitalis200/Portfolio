@@ -156,7 +156,7 @@ const Portfolio = () => {
               </Button>
               <Button>
                 <a
-                  href="https://veeportfolio.netlify.com"
+                  href="https://veeportfolio.netlify.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="read-btn"
