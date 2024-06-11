@@ -70,6 +70,7 @@ const AboutBody = styled.div`
   flex-wrap: wrap;
   text-align: center;
   padding-top: 80px;
+  align-items: center;
 `;
 
 const Description = styled.p`
