@@ -7,6 +7,9 @@ import django from "../assets/djangorest.png";
 import mongo from "../assets/mongo.png";
 import postgres from "../assets/postgres.svg";
 import node from "../assets/node.png";
+import xd from "../assets/xd.svg";
+import figma from "../assets/figma.svg";
+import aftereffects from "../assets/after-effects.svg"
 import { montserrat } from "../styles/type";
 
 export interface ProficienciesProps {}
@@ -14,7 +17,7 @@ export interface ProficienciesProps {}
 const Proficiencies: React.SFC<ProficienciesProps> = () => {
   return (
     <MainBody>
-      <Heading id="proficiencies">My Stacks.</Heading>
+      <Heading id="proficiencies">My Tools.</Heading>
       <SubBody>
         <Proficiency>
           <img className="icons" src={vue} alt="Vue logo" />
@@ -36,14 +39,26 @@ const Proficiencies: React.SFC<ProficienciesProps> = () => {
           <img className="icons" src={django} alt="Django logo" />
           <Text>Django REST</Text>
         </Proficiency>
-        <Proficiency>
+        {/* <Proficiency>
           <img className="icons" src={mongo} alt="MongoDB logo" />
           <Text>MongoDB</Text>
+        </Proficiency> */}
+        <Proficiency>
+          <img className="icons" src={figma} alt="Figma logo" />
+          <Text>Figma</Text>
         </Proficiency>
         <Proficiency>
+          <img className="icons" src={xd} alt="XD logo" />
+          <Text>Adobe XD</Text>
+        </Proficiency>
+        <Proficiency>
+          <img className="icons" src={aftereffects} alt="After Effects logo" />
+          <Text>After Effects</Text>
+        </Proficiency>
+        {/* <Proficiency>
           <img className="icons" src={postgres} alt="PostgreSQL logo" />
           <Text>PostgreSQL</Text>
-        </Proficiency>
+        </Proficiency> */}
       </SubBody>
     </MainBody>
   );
@@ -73,6 +88,9 @@ const SubBody = styled.div`
 
 const Proficiency = styled.div`
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .icons {
     margin-top: 40px;
     display: inline-block;

@@ -4,6 +4,7 @@ import { poppins, montserrat } from "../styles/type";
 import github from "../assets/github-logo.svg";
 import linkedin from "../assets/linkedin.svg";
 import Display from "../assets/display.jpg";
+import dribbble from "../assets/dribbble-icon.svg";
 
 export interface HomeProps {}
 
@@ -16,12 +17,11 @@ const Home: React.SFC<HomeProps> = () => {
         </MyImage>
         <TextArea>
           <Title>Paul Otieno.</Title>
-          <Description>Software Engineer</Description>
+          <Description>Software Engineer | UX/UI Designer</Description>
           <TextBody>
             Hello There. My name is <strong>Paul Otieno</strong>. I'm a
-            Full-stack software engineer based in Nairobi, Kenya. I love solving
-            problems through code. I am passionate about great user experience
-            and user interface design.
+            software engineer and UX/UI Designer based in Nairobi, Kenya. 
+            I am passionate about developing applications with amazing design and user experience.
           </TextBody>
           <ContactButton>
             <a href="#contact" className="contact-btn">
@@ -37,6 +37,7 @@ const Home: React.SFC<HomeProps> = () => {
               >
                 <img className="github-logo" src={github} alt="Github logo" />
               </a>
+              <span className="tooltip-text">Github</span>
             </SocialLinks>
 
             <SocialLinks>
@@ -51,6 +52,21 @@ const Home: React.SFC<HomeProps> = () => {
                   alt="Linkedin logo"
                 />
               </a>
+              <span className="tooltip-text">LinkedIn</span>
+            </SocialLinks>
+            <SocialLinks>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://dribbble.com/paulvitalis"
+              >
+                <img
+                  className="dribbble-logo"
+                  src={dribbble}
+                  alt="Dribbble logo"
+                />
+              </a>
+              <span className="tooltip-text">Dribbble</span>
             </SocialLinks>
           </Social>
         </TextArea>
@@ -82,7 +98,9 @@ const Description = styled.p`
 const TextArea = styled.div`
   width: 100%;
   margin: 0 auto;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   @media only screen and (min-width: 768px) {
     width: 50%;
   }
@@ -124,6 +142,7 @@ const TextBody = styled.p`
   font-family: ${poppins}, Sans-serif;
   line-height: 1.6;
   text-align: center;
+  width: 70%;
 `;
 
 const ContactButton = styled.div`
@@ -151,32 +170,64 @@ const Social = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   @media only screen and (min-width: 768px) {
-    width: 10%;
+    width: 20%;
   }
 `;
 
 const SocialLinks = styled.div`
   width: 20%;
   margin: 30px auto 0 auto;
-
+position: relative;
   .github-logo {
     width: 100%;
   }
   .linkedin-logo {
     width: 100%;
   }
+  .dribbble-logo {
+    width: 100%;
+  }
+
+.tooltip-text {
+  visibility: hidden;
+  width: 100px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 60%;
+  margin-left: -50px;
+
+  }
+
+  &:hover {
+   .tooltip-text{
+   visibility: visible;
+   }
+  }
+  
+    
 
   @media only screen and (min-width: 768px) {
     .github-logo,
-    .linkedin-logo {
-      width: 140%;
+    .linkedin-logo,
+    .dribbble-logo {
+      width: 80%;
       filter: invert(0.5);
     }
     .linkedin-logo:hover,
-    .github-logo:hover {
+    .github-logo:hover,
+    .dribbble-logo:hover {
       filter: invert(0);
     }
   }
 `;
+
 
 export default Home;
