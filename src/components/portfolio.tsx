@@ -76,36 +76,6 @@ const Portfolio = () => {
           </TextBody>
         </Project>
         <Project>
-          <img className="portfolio-img" src={advice} alt="Advice generator" />
-          <TextBody>
-            <Title>Advice Generator</Title>
-            <Text>
-              This is an app that utilizes the Advice Slip API to randomly
-              generate different pieces of advice. <br />
-              <Button>
-                <a
-                  href="https://github.com/Paulvitalis200/advice-generator"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="read-btn"
-                >
-                  Github repo
-                </a>
-              </Button>
-              <Button>
-                <a
-                  href="https://advice-generator-five-blond.vercel.app/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="read-btn"
-                >
-                  Website
-                </a>
-              </Button>
-            </Text>
-          </TextBody>
-        </Project>
-        <Project className="roo-img">
           <img className="portfolio-img" src={rick} alt="Design portfolio" />
           <TextBody>
             <Title>Shows app</Title>
@@ -136,7 +106,7 @@ const Portfolio = () => {
             </Text>
           </TextBody>
         </Project>
-        <Project>
+        <Project className="roo-img">
           <img className="portfolio-img" src={design} alt="Design portfolio" />
           <TextBody>
             <Title>Design Portfolio</Title>
@@ -167,6 +137,36 @@ const Portfolio = () => {
             </Text>
           </TextBody>
         </Project>
+        {/* <Project>
+          <img className="portfolio-img" src={advice} alt="Advice generator" />
+          <TextBody>
+            <Title>Advice Generator</Title>
+            <Text>
+              This is an app that utilizes the Advice Slip API to randomly
+              generate different pieces of advice. <br />
+              <Button>
+                <a
+                  href="https://github.com/Paulvitalis200/advice-generator"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="read-btn"
+                >
+                  Github repo
+                </a>
+              </Button>
+              <Button>
+                <a
+                  href="https://advice-generator-five-blond.vercel.app/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="read-btn"
+                >
+                  Website
+                </a>
+              </Button>
+            </Text>
+          </TextBody>
+        </Project> */}
       </PortfolioBody>
     </MainBody>
   );

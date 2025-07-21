@@ -19,12 +19,16 @@ const Home: React.SFC<HomeProps> = () => {
           <Title>Paul Otieno.</Title>
           <Description>Software Engineer | UX/UI Designer</Description>
           <TextBody>
-            Hello There. My name is <strong>Paul Otieno</strong>. I'm a
-            software engineer and UX/UI Designer based in Nairobi, Kenya. 
-            I am passionate about developing applications with amazing design and user experience.
+            Hello There. My name is <strong>Paul Otieno</strong>. I'm a software
+            engineer and UX/UI Designer based in Nairobi, Kenya. I am passionate
+            about developing applications with amazing design and user
+            experience.
           </TextBody>
           <ContactButton>
-            <a href="#contact" className="contact-btn">
+            <a
+              href="mailto:nairobifellowships@dfa.ie?subject=Ireland%20Fellows%20Programme"
+              className="contact-btn"
+            >
               Contact Me
             </a>
           </ContactButton>
@@ -98,9 +102,9 @@ const Description = styled.p`
 const TextArea = styled.div`
   width: 100%;
   margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media only screen and (min-width: 768px) {
     width: 50%;
   }
@@ -177,7 +181,7 @@ const Social = styled.div`
 const SocialLinks = styled.div`
   width: 20%;
   margin: 30px auto 0 auto;
-position: relative;
+  position: relative;
   .github-logo {
     width: 100%;
   }
@@ -188,31 +192,28 @@ position: relative;
     width: 100%;
   }
 
-.tooltip-text {
-  visibility: hidden;
-  width: 100px;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
+  .tooltip-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
 
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  left: 60%;
-  margin-left: -50px;
-
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 60%;
+    margin-left: -50px;
   }
 
   &:hover {
-   .tooltip-text{
-   visibility: visible;
-   }
+    .tooltip-text {
+      visibility: visible;
+    }
   }
-  
-    
 
   @media only screen and (min-width: 768px) {
     .github-logo,
@@ -228,6 +229,5 @@ position: relative;
     }
   }
 `;
-
 
 export default Home;
