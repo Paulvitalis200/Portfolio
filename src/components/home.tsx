@@ -19,7 +19,7 @@ const Home: React.SFC<HomeProps> = () => {
           <Title>Paul Otieno.</Title>
           <Description>Software Engineer | UX/UI Designer</Description>
           <TextBody>
-            Hello There. My name is <strong>Paul Otieno</strong>. I'm a software
+            Hello There. My name is <strong>Paul Otieno</strong>. I'm a Software
             engineer and UX/UI Designer based in Nairobi, Kenya. I am passionate
             about developing applications with amazing design and user
             experience.

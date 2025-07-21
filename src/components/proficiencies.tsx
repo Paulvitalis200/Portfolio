@@ -9,7 +9,7 @@ import postgres from "../assets/postgres.svg";
 import node from "../assets/node.png";
 import xd from "../assets/xd.svg";
 import figma from "../assets/figma.svg";
-import aftereffects from "../assets/after-effects.svg"
+import aftereffects from "../assets/after-effects.svg";
 import { montserrat } from "../styles/type";
 
 export interface ProficienciesProps {}
@@ -47,14 +47,14 @@ const Proficiencies: React.SFC<ProficienciesProps> = () => {
           <img className="icons" src={figma} alt="Figma logo" />
           <Text>Figma</Text>
         </Proficiency>
-        <Proficiency>
+        {/* <Proficiency>
           <img className="icons" src={xd} alt="XD logo" />
           <Text>Adobe XD</Text>
         </Proficiency>
         <Proficiency>
           <img className="icons" src={aftereffects} alt="After Effects logo" />
           <Text>After Effects</Text>
-        </Proficiency>
+        </Proficiency> */}
         {/* <Proficiency>
           <img className="icons" src={postgres} alt="PostgreSQL logo" />
           <Text>PostgreSQL</Text>
