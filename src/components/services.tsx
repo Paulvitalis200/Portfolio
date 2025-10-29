@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { montserrat } from "../styles/type";
 import devto from "../assets/devto.svg";
 import medium from "../assets/medium.svg";
+import substack from "../assets/substack.svg";
 
 export interface PostsProps {}
 
@@ -11,6 +12,26 @@ const Posts: React.SFC<PostsProps> = () => {
     <MainBody>
       <Heading id="articles">Articles.</Heading>
       <PostBody>
+        <Post className="cards">
+          <img className="icons" src={substack} alt="substack" />
+
+          <Text>Substack articles</Text>
+
+          <TextBody>
+            A collection of some of my articles on the popular writing website
+            Substack.
+          </TextBody>
+          <Button>
+            <a
+              href="https://substack.com/@pauldreamer"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="read-btn"
+            >
+              Visit
+            </a>
+          </Button>
+        </Post>
         <Post className="cards">
           <img className="icons" src={devto} alt="devto" />
 
@@ -34,7 +55,7 @@ const Posts: React.SFC<PostsProps> = () => {
         <Post className="cards">
           <img className="icons" src={medium} alt="medium" />
 
-          <Text>Medium Articles</Text>
+          <Text>Medium articles</Text>
 
           <TextBody>
             A collection of some of my articles on the popular writing website
